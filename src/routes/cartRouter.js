@@ -26,10 +26,15 @@ router.post("/", async (req, res) => {
 
 router.get("/:idCart", async (req, res) => {
     try {
-        const {idCart} = req.params
-        res.json(await cartManager.getCartById(idCart))
+        const { idCart } = req.params;
+        const cart = await cartManager.getCartById(idCart);
+        if (!cart) {
+            res.status(404).json({ message: "Cart not found" });
+        } else {
+            res.json(cart);
+        }
     } catch (error) {
-        console.log(error);
+        res.status(500).json({ message: error.message });
     }
 });
 

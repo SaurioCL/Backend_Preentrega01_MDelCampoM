@@ -1,6 +1,6 @@
 import express from 'express';
 import morgan from 'morgan';
-import { __dirname } from './path.js';
+import { __dirname } from './utils/path.js';
 import cartsRouter from './routes/cartRouter.js';
 import productsRouter from './routes/productRouter.js';
 import { errorHandler } from './middlewares/errorHandler.js';

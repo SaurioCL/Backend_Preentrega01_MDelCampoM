@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import { __dirname } from "../path.js";
+import { __dirname } from "../utils/path.js";
 import ProductManager from "../managers/productManager.js";
 import {productValidator} from '../middlewares/productValidator.js'
 

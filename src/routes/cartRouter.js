@@ -1,5 +1,4 @@
 import { Router } from "express";
-import path from "path";
 import CartManager from "../managers/cartManager.js";
 import { __dirname } from "../utils/path.js";
 
